@@ -16,44 +16,50 @@ export function Projects() {
             title: "SchoolHQ.ng",
             description: "School management platform using Laravel and Plesk hosting integration.",
             link: "#",
-            tags: ["Laravel", "Plesk"]
+            tags: ["Laravel", "Plesk"],
+            image: "/images/projects/euvate.png"
         },
         {
             title: "Safe Drop",
             description: "React Native + Express.js based app for secure item delivery and tracking.",
             link: "#",
             tags: ["React Native", "Express.js"],
-            image: "/images/safe-drop.jpg"
+            image: "/images/projects/euvate.png"
         },
         {
             title: "GLT Platform",
             description: "A JWT-authenticated platform using Flutter frontend and Node.js backend.",
             link: "#",
-            tags: ["Flutter", "Node.js", "JWT"]
+            tags: ["Flutter", "Node.js", "JWT"],
+            image: "/images/projects/euvate.png"
         },
         {
             title: "Euforia SVG Manager",
             description: "An SVG-based design element manager with storage and JSON integration.",
             link: "#",
-            tags: ["SVG", "JSON"]
+            tags: ["SVG", "JSON"],
+            image: "/images/projects/euforia.png"
         },
         {
             title: "EuCloudHost",
             description: "Custom hosting solution with Plesk automation and Git deployment.",
             link: "#",
-            tags: ["Plesk", "Git", "Automation"]
+            tags: ["Plesk", "Git", "Automation"],
+            image: "/images/projects/eucloudhost.png"
         },
         {
             title: "Euvate",
             description: "Online course platform for tech education with email automation.",
             link: "#",
-            tags: ["EdTech", "Email Automation"]
+            tags: ["EdTech", "Email Automation"],
+            image: "/images/projects/euvate.png"
         },
         {
             title: "Eulogia Academy",
             description: "On-site and online hybrid tech academy initiative started in Ibadan.",
             link: "#",
-            tags: ["Education", "Hybrid Learning"]
+            tags: ["Education", "Hybrid Learning"],
+            image: "/images/safe-drop.jpg"
         }
     ];
 
@@ -88,8 +94,9 @@ export function Projects() {
                                 </div>
                             )}
 
+
                             <div className="p-6">
-                                <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+                                <h3 className="text-xl font-bold mb-2 text-transparent bg-clip-text bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 ">{project.title}</h3>
                                 <p className="text-muted-foreground mb-4">{project.description}</p>
 
                                 <div className="flex flex-wrap gap-2 mb-4">

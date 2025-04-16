@@ -11,19 +11,19 @@ export function Contact() {
         },
         {
             name: "GitHub",
-            url: "https://github.com/yourusername",
+            url: "https://github.com/Hybiekay",
             icon: <Github className="w-5 h-5" />,
             color: "text-gray-300"
         },
         {
             name: "Twitter",
-            url: "https://twitter.com/yourusername",
+            url: "https://x.com/ademolaibukuno8",
             icon: <Twitter className="w-5 h-5" />,
             color: "text-blue-400"
         },
         {
             name: "LinkedIn",
-            url: "https://linkedin.com/in/yourusername",
+            url: "https://linkedin.com/in/ademola-ibukunoluwa-572b77253",
             icon: <Linkedin className="w-5 h-5" />,
             color: "text-blue-500"
         },
@@ -35,7 +35,7 @@ export function Contact() {
         },
         {
             name: "Website",
-            url: "https://ademola.ng",
+            url: "https://Ibukunoluwa.ademola.ng",
             icon: <Globe className="w-5 h-5" />,
             color: "text-green-400"
         }
