@@ -17,7 +17,7 @@ export function About() {
                             <div className="md:col-span-1 flex justify-center">
                                 <div className="relative h-64 w-64 md:h-80 md:w-80 rounded-full border-4 border-primary/20 overflow-hidden">
                                     <Image
-                                        src="/path-to-your-image.jpg" // Update with your image path
+                                        src="/ademola_ibukunoluwa.png" // Update with your image path
                                         alt="Ademola Ibukunoluwa"
                                         fill
                                         className="object-cover"
