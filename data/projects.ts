@@ -27,7 +27,7 @@ const projects: Project[] = [
             "/images/6.png",
         ],
         github: "https://github.com/Hybiekay/Clipzy",
-        download: "https://play.google.com/store/apps/details?id=com.clipzy.app"
+        download: "/clipzy.apk"
     },
     {
         slug: "schoolhq",

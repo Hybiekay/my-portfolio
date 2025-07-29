@@ -65,6 +65,7 @@ export default function ProjectClientView({ project }: { project: Project }) {
                         {project.download && (
                             <Link
                                 href={project.download}
+                                download={project.slug === "clipzy"}
                                 target="_blank"
                                 className="inline-flex items-center gap-2 text-sm text-green-600 hover:underline"
                             >
