@@ -45,7 +45,7 @@ const projects: Project[] = [
 
 
         ],
-        github: "https://github.com/yourusername/schoolhq",
+        github: "https://schoolhq.ng/",
         download: undefined // Still in development
     },
     {
@@ -87,8 +87,8 @@ const projects: Project[] = [
         link: "#",
         tags: ["EdTech", "Email Automation"],
         images: ["/images/projects/euvate.png"],
-        github: "https://github.com/yourusername/euvate",
-        download: "https://euvate.com/app-download"
+        github: undefined,
+        download: "https://euvate.eulogia.net/app-download"
     },
     {
         slug: "ping-post",

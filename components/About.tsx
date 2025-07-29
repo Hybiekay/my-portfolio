@@ -34,7 +34,7 @@ export function About() {
 
                                 <div className="space-y-4 text-muted-foreground">
                                     <p>
-                                        I'm Ademola Ibukunoluwa, a passionate fullstack Engineer and the CEO of Eulogia Technologies.
+                                        I'm Ademola Ibukunoluwa, a passionate fullstack Engineer and Flutter App Engineer.
                                         I specialize in building cutting-edge digital solutions for the web and mobile space.
                                     </p>
 
@@ -45,6 +45,10 @@ export function About() {
 
                                     <p>
                                         I'm also a Computer Science student, constantly sharpening my problem-solving skills and pushing the boundaries of what's possible with code.
+                                    </p>
+
+                                    <p>
+                                        Over the years, I've had the privilege of training more than <span className="font-semibold text-primary">120 students</span> at <span className="font-semibold text-primary">Appclick Technology Institute</span>. Many of them have gone on to secure positions at <span className="font-semibold text-primary">top tech companies in Nigeria</span>, a testament to the impact and quality of our learning approach.
                                     </p>
 
                                     <p>
