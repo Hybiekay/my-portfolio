@@ -13,7 +13,7 @@ export function Hero() {
                     words={[
                         'Ademola Ibukunoluwa',
                         'a Fullstack Engineer',
-                        'a Tech Entrepreneur'
+                        'a Flutter Developer',
                     ]}
                     loop={true}
                     cursorColor="#3b82f6" // blue-500
@@ -21,7 +21,7 @@ export function Hero() {
                     deleteSpeed={50}
                 />
             </h1>
-            <p className="mt-4 text-lg z-10">Fullstack Engineer | Flutter & Node.js | CEO of Eulogia Technologies</p>
+            <p className="mt-4 text-lg z-10">Fullstack Engineer | Flutter & Node.js | Flutter Instructor</p>
             <div className="mt-6 z-10">
                 <a href="#projects" className="px-6 py-2 bg-blue-600 rounded hover:bg-blue-500 transition-all duration-300 shadow-lg">View Projects</a>
             </div>

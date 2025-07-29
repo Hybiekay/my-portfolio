@@ -2,66 +2,12 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image"
+import projects from "@/data/projects";
+import Link from "next/link"; // Make sure it's at the top
 
 export function Projects() {
-    const projects = [
-        {
-            title: "Expense Manager App",
-            description: "A mobile app to manage daily expenses, built with Flutter and Firebase.",
-            link: "#",
-            tags: ["Flutter", "Firebase"],
-            image: "/images/expense-manager.jpg" // Update with your image path
-        },
-        {
-            title: "SchoolHQ.ng",
-            description: "School management platform using Laravel and Plesk hosting integration.",
-            link: "#",
-            tags: ["Laravel", "Plesk"],
-            image: "/images/projects/euvate.png"
-        },
-        {
-            title: "Safe Drop",
-            description: "React Native + Express.js based app for secure item delivery and tracking.",
-            link: "#",
-            tags: ["React Native", "Express.js"],
-            image: "/images/projects/euvate.png"
-        },
-        {
-            title: "GLT Platform",
-            description: "A JWT-authenticated platform using Flutter frontend and Node.js backend.",
-            link: "#",
-            tags: ["Flutter", "Node.js", "JWT"],
-            image: "/images/projects/euvate.png"
-        },
-        {
-            title: "Euforia SVG Manager",
-            description: "An SVG-based design element manager with storage and JSON integration.",
-            link: "#",
-            tags: ["SVG", "JSON"],
-            image: "/images/projects/euforia.png"
-        },
-        {
-            title: "EuCloudHost",
-            description: "Custom hosting solution with Plesk automation and Git deployment.",
-            link: "#",
-            tags: ["Plesk", "Git", "Automation"],
-            image: "/images/projects/eucloudhost.png"
-        },
-        {
-            title: "Euvate",
-            description: "Online course platform for tech education with email automation.",
-            link: "#",
-            tags: ["EdTech", "Email Automation"],
-            image: "/images/projects/euvate.png"
-        },
-        {
-            title: "Eulogia Academy",
-            description: "On-site and online hybrid tech academy initiative started in Ibadan.",
-            link: "#",
-            tags: ["Education", "Hybrid Learning"],
-            image: "/images/safe-drop.jpg"
-        }
-    ];
+
+
 
     return (
         <section id="projects" className="py-20 px-4 max-w-7xl mx-auto">
@@ -83,10 +29,10 @@ export function Projects() {
 
                         <Card className="h-full bg-background/90 border border-gray-800 group-hover:border-transparent transition-all">
                             {/* Project image */}
-                            {project.image && (
+                            {project.images && (
                                 <div className="relative h-48 w-full overflow-hidden">
                                     <Image
-                                        src={project.image}
+                                        src={project.images[0]}
                                         alt={project.title}
                                         fill
                                         className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -111,9 +57,9 @@ export function Projects() {
                                 </div>
 
                                 <Button variant="outline" className="w-full mt-auto" asChild>
-                                    <a href={project.link} className="flex items-center justify-center gap-2 text-amber-50 ">
+                                    <Link href={`/projects/${project.slug}`} className="flex items-center justify-center gap-2 text-amber-50">
                                         View Project <ArrowUpRight className="h-4 w-4" />
-                                    </a>
+                                    </Link>
                                 </Button>
                             </div>
                         </Card>

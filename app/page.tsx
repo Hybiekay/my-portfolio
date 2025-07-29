@@ -1,13 +1,14 @@
-"use client"
+"use client";
+
 import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { Projects } from "@/components/Projects";
 import { Skills } from "@/components/Skills";
-import { div } from "framer-motion/client";
 import { Home, User, Code, Briefcase, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 export default function Homes() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -23,7 +24,10 @@ export default function Homes() {
           const offsetTop = element.offsetTop;
           const offsetHeight = element.offsetHeight;
 
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
             setActiveSection(section);
             break;
           }
@@ -36,7 +40,7 @@ export default function Homes() {
   }, []);
 
   return (
-    <main className="bg-gray-900 text-white pb-20">
+    <main className="bg-gray-900 text-white pb-28">
       <Hero />
       <About />
       <Skills />
@@ -44,41 +48,39 @@ export default function Homes() {
       <Contact />
       <Footer />
 
-      {/* Bottom Navigation */}
-      <nav className="fixed bottom-4 left-0 right-0 mx-auto max-w-md px-4 z-50">
-        <div className="bg-gray-800/80 backdrop-blur-lg rounded-full p-2 shadow-lg border border-gray-700">
-          <div className="flex justify-around items-center">
-            <NavLink
-              href="#hero"
-              icon={<Home size={20} />}
-              label="Home"
-              isActive={activeSection === "hero"}
-            />
-            <NavLink
-              href="#about"
-              icon={<User size={20} />}
-              label="About"
-              isActive={activeSection === "about"}
-            />
-            <NavLink
-              href="#skills"
-              icon={<Code size={20} />}
-              label="Skills"
-              isActive={activeSection === "skills"}
-            />
-            <NavLink
-              href="#projects"
-              icon={<Briefcase size={20} />}
-              label="Work"
-              isActive={activeSection === "projects"}
-            />
-            <NavLink
-              href="#contact"
-              icon={<Mail size={20} />}
-              label="Contact"
-              isActive={activeSection === "contact"}
-            />
-          </div>
+      {/* Bottom Nav */}
+      <nav className="fixed bottom-4 inset-x-0 z-50 flex justify-center">
+        <div className="bg-gray-800/80 backdrop-blur-md border border-gray-700 px-4 py-2 rounded-full flex gap-4 shadow-xl">
+          <NavLink
+            href="#hero"
+            label="Home"
+            icon={<Home size={20} />}
+            isActive={activeSection === "hero"}
+          />
+          <NavLink
+            href="#about"
+            label="About"
+            icon={<User size={20} />}
+            isActive={activeSection === "about"}
+          />
+          <NavLink
+            href="#skills"
+            label="Skills"
+            icon={<Code size={20} />}
+            isActive={activeSection === "skills"}
+          />
+          <NavLink
+            href="#projects"
+            label="Work"
+            icon={<Briefcase size={20} />}
+            isActive={activeSection === "projects"}
+          />
+          <NavLink
+            href="#contact"
+            label="Contact"
+            icon={<Mail size={20} />}
+            isActive={activeSection === "contact"}
+          />
         </div>
       </nav>
     </main>
@@ -89,7 +91,7 @@ function NavLink({
   href,
   icon,
   label,
-  isActive
+  isActive,
 }: {
   href: string;
   icon: React.ReactNode;
@@ -97,22 +99,21 @@ function NavLink({
   isActive: boolean;
 }) {
   return (
-    <div className={`${isActive && "bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 rounded-full"}`}>
-      <a
-        href={href}
-        className={`flex flex-col items-center p-3 rounded-full transition-all group relative overflow-hidden ${isActive ? "text-white" : "text-gray-300 hover:text-white"
-          }`}
-      >
-        {isActive && (
-          <span className="  bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 rounded-full" />
-        )}
-        <span className={`relative z-10 ${isActive ? "text-white" : "text-gray-300 group-hover:text-white"}`}>
-          {icon}
-        </span>
-        <span className={`text-xs mt-1 relative z-10 ${isActive ? "text-white" : "text-gray-400 group-hover:text-white"}`}>
-          {label}
-        </span>
-      </a>
-    </div>
+    <motion.a
+      href={href}
+      className={`relative flex flex-col items-center justify-center px-3 py-2 transition-all rounded-full group ${isActive ? "text-white" : "text-gray-400 hover:text-white"
+        }`}
+      whileHover={{ scale: 1.1 }}
+      whileTap={{ scale: 0.95 }}
+    >
+      {isActive && (
+        <motion.span
+          layoutId="activeGlow"
+          className="absolute inset-0 bg-gradient-to-r from-purple-500 via-blue-500 to-indigo-500 rounded-full blur-sm opacity-40"
+        />
+      )}
+      <span className="relative z-10">{icon}</span>
+      <span className="text-[10px] mt-1 relative z-10">{label}</span>
+    </motion.a>
   );
 }
