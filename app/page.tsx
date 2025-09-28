@@ -9,6 +9,7 @@ import { Skills } from "@/components/Skills";
 import { Home, User, Code, Briefcase, Mail } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 export default function Homes() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -40,50 +41,75 @@ export default function Homes() {
   }, []);
 
   return (
-    <main className="bg-gray-900 text-white pb-28">
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-      <Footer />
+    <>
+      <Head>
+        <title>Ademola ibukunoluwa | CodeWithHybiekay | Flutter Developer & Fullstack Engineer</title>
+        <meta
+          name="description"
+          content="Hi, I'm Ademola ibukunoluwa, (Hybiekay) — Flutter Developer, Fullstack Engineer & Instructor. Learn coding, Flutter, and modern app development with tutorials and real-world projects."
+        />
+        <meta
+          name="keywords"
+          content="Flutter, Dart, Fullstack Developer, Portfolio, CodeWithHybiekay, Ibukunoluwa Ademola, Coding Tutorials"
+        />
+        <meta name="author" content="Ibukunoluwa Ademola" />
+        <meta property="og:title" content="CodeWithHybiekay | Flutter Developer" />
+        <meta
+          property="og:description"
+          content="Learn coding with Hybiekay — Flutter, Node.js, and more."
+        />
+        <meta property="og:url" content="https://ibukunoluwa.ademola.ng" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://ibukunoluwa.ademola.ng/preview.jpg" />
+        <meta property="og:profile" content="https://www.linkedin.com/in/ademola-ibukunoluwa-572b77253" />
+        <link rel="canonical" href="https://ibukunoluwa.ademola.ng" />
 
-      {/* Bottom Nav */}
-      <nav className="fixed bottom-4 inset-x-0 z-50 flex justify-center">
-        <div className="bg-gray-800/80 backdrop-blur-md border border-gray-700 px-4 py-2 rounded-full flex gap-4 shadow-xl">
-          <NavLink
-            href="#hero"
-            label="Home"
-            icon={<Home size={20} />}
-            isActive={activeSection === "hero"}
-          />
-          <NavLink
-            href="#about"
-            label="About"
-            icon={<User size={20} />}
-            isActive={activeSection === "about"}
-          />
-          <NavLink
-            href="#skills"
-            label="Skills"
-            icon={<Code size={20} />}
-            isActive={activeSection === "skills"}
-          />
-          <NavLink
-            href="#projects"
-            label="Work"
-            icon={<Briefcase size={20} />}
-            isActive={activeSection === "projects"}
-          />
-          <NavLink
-            href="#contact"
-            label="Contact"
-            icon={<Mail size={20} />}
-            isActive={activeSection === "contact"}
-          />
-        </div>
-      </nav>
-    </main>
+      </Head>
+      <main className="bg-gray-900 text-white pb-28">
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
+
+        {/* Bottom Nav */}
+        <nav className="fixed bottom-4 inset-x-0 z-50 flex justify-center">
+          <div className="bg-gray-800/80 backdrop-blur-md border border-gray-700 px-4 py-2 rounded-full flex gap-4 shadow-xl">
+            <NavLink
+              href="#hero"
+              label="Home"
+              icon={<Home size={20} />}
+              isActive={activeSection === "hero"}
+            />
+            <NavLink
+              href="#about"
+              label="About"
+              icon={<User size={20} />}
+              isActive={activeSection === "about"}
+            />
+            <NavLink
+              href="#skills"
+              label="Skills"
+              icon={<Code size={20} />}
+              isActive={activeSection === "skills"}
+            />
+            <NavLink
+              href="#projects"
+              label="Work"
+              icon={<Briefcase size={20} />}
+              isActive={activeSection === "projects"}
+            />
+            <NavLink
+              href="#contact"
+              label="Contact"
+              icon={<Mail size={20} />}
+              isActive={activeSection === "contact"}
+            />
+          </div>
+        </nav>
+      </main>
+    </>
   );
 }
 

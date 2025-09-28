@@ -12,13 +12,13 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Ademola Ibukunoluwa Profile",
-  description: "Welcome to the profile of Ademola Ibukunoluwa, a skilled developer and tech enthusiast.",
-  keywords: "Ademola Ibukunoluwa, Profile, Developer, flutter Developer React Native, laravel Developer Tech Enthusiast, Portfolio",
-  authors: [{ name: "Ademola Ibukunoluwa" }],
-  viewport: "width=device-width, initial-scale=1.0",
-};
+// export const metadata: Metadata = {
+//   title: "Ademola Ibukunoluwa Profile",
+//   description: "Welcome to the profile of Ademola Ibukunoluwa, a skilled developer and tech enthusiast.",
+//   keywords: "Ademola Ibukunoluwa, Profile, Developer, flutter Developer React Native, laravel Developer Tech Enthusiast, Portfolio",
+//   authors: [{ name: "Ademola Ibukunoluwa" }],
+//   viewport: "width=device-width, initial-scale=1.0",
+// };
 
 
 export default function RootLayout({
